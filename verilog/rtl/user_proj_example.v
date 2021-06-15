@@ -35,21 +35,6 @@
  *-------------------------------------------------------------
  */
 
-/*`include "wb_CAN.sv"
-`include "CAN_receiver.sv"
-`include "CRCcheck.sv"
-`include "ECU.sv"
-`include "edgedetect.sv"
-`include "fifo.v"
-`include "flex_counter.sv"
-`include "flex_pts_sr.sv"
-`include "flex_stp_sr.sv"
-`include "RCU.sv"
-`include "TCU.sv"
-`include "timer.sv"
-`include "tx_timer.sv"
-`include "wb_slave.v"*/
-
 module user_proj_example #(
     parameter BITS = 32
 )(
@@ -97,8 +82,8 @@ module user_proj_example #(
     wire [`MPRJ_IO_PADS-1:0] io_oeb;
 
     // IO
-    assign io_out[0] = CAN_TX;
-    assign CANRX = io_in[0];
+    assign io_out[18] = CAN_TX;
+    assign CANRX = io_in[19];
     assign io_oeb = {(`MPRJ_IO_PADS-1){wb_rst_i}};
 
     // IRQ
