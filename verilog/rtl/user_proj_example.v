@@ -35,7 +35,7 @@
  *-------------------------------------------------------------
  */
 
-`include "wb_CAN.sv"
+/*`include "wb_CAN.sv"
 `include "CAN_receiver.sv"
 `include "CRCcheck.sv"
 `include "ECU.sv"
@@ -48,7 +48,7 @@
 `include "TCU.sv"
 `include "timer.sv"
 `include "tx_timer.sv"
-`include "wb_slave.v"
+`include "wb_slave.v"*/
 
 module user_proj_example #(
     parameter BITS = 32

@@ -19,10 +19,24 @@ set ::env(DESIGN_NAME) user_proj_example
 
 set ::env(VERILOG_FILES) "\
 	$script_dir/../../caravel/verilog/rtl/defines.v \
-	$script_dir/../../verilog/rtl/user_proj_example.v"
+	$script_dir/../../verilog/rtl/user_proj_example.v \
+	$script_dir/../../verilog/rtl/wb_CAN.sv \
+	$script_dir/../../verilog/rtl/CAN_receiver.sv \
+	$script_dir/../../verilog/rtl/CRCcheck.sv \
+	$script_dir/../../verilog/rtl/ECU.sv \
+	$script_dir/../../verilog/rtl/edgedetect.sv \
+	$script_dir/../../verilog/rtl/fifo.v \
+	$script_dir/../../verilog/rtl/flex_counter.sv \
+	$script_dir/../../verilog/rtl/flex_stp_sr.sv \
+	$script_dir/../../verilog/rtl/flex_pts_sr.sv \
+	$script_dir/../../verilog/rtl/RCU.sv \
+	$script_dir/../../verilog/rtl/TCU.sv \
+	$script_dir/../../verilog/rtl/timer.sv \
+	$script_dir/../../verilog/rtl/tx_timer.sv \
+	$script_dir/../../verilog/rtl/wb_slave.v"
 
 set ::env(CLOCK_PORT) "wb_clk_i"
-#set ::env(CLOCK_NET) "c"
+#set ::env(CLOCK_NET) "counter.clk"
 set ::env(CLOCK_PERIOD) "10"
 
 set ::env(FP_SIZING) absolute
@@ -34,11 +48,12 @@ set ::env(GND_NETS) [list {vssd1} {vssd2} {vssa1} {vssa2}]
 
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
 
-set ::env(PL_BASIC_PLACEMENT) 1
-set ::env(PL_TARGET_DENSITY) 0.33
+#set ::env(PL_BASIC_PLACEMENT) 1
+set ::env(PL_TARGET_DENSITY) 0.35
 
 # If you're going to use multiple power domains, then keep this disabled.
 set ::env(RUN_CVC) 0
 
-set ::env(ROUTING_CORES) 4
+set ::env(ROUTING_CORES) 8
+set ::env(PL_TIME_DRIVEN) 1
 #set ::env(SYNTH_NO_FLAT) 1
