@@ -100,6 +100,7 @@ module tb_wb_CAN();
             while(~tb_wb_ack_o) begin
                 @(posedge tb_wb_clk_i);
                 #(CLK_PERIOD / 10);
+            end
             if(wb_dat == tb_wb_dat_o) begin // Check passed
             $info("Correct %s output during %s test case", signal_name, tb_test_case);
             end
@@ -919,7 +920,6 @@ module tb_wb_CAN();
         construct_pkt(msg_msg_id, msg_pkt_size, msg_pkt_data, msg_CRC, 0, 0);
         ACK_err = 0;
         RXstream(bitstream, bitstream.size());
-        
 
     end
 
