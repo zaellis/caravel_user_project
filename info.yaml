@@ -7,7 +7,7 @@ project:
   organization_url: "https://zacharyell.is/"
   owner: "Zachary Ellis"
   process: "SKY130"
-  project_name: "Caravel"
+  project_name: "Wishbone CAN"
   project_id: "00000000"
   tags:
     - "Open MPW"
