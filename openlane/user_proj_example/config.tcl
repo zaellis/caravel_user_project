@@ -40,7 +40,7 @@ set ::env(CLOCK_PORT) "wb_clk_i"
 set ::env(CLOCK_PERIOD) "10"
 
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 2000 2000"
+set ::env(DIE_AREA) "0 0 1700 1700"
 set ::env(DESIGN_IS_CORE) 0
 
 set ::env(GLB_RT_MAXLAYER) 4
